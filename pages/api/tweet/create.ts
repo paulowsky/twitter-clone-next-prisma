@@ -1,8 +1,6 @@
-import { PrismaClient } from '@prisma/client'
+import prisma from '../../../db/prisma'
 import jwt from 'jsonwebtoken'
 export default async (req, res) => {
-    const prisma = new PrismaClient()
-
     const { token } = req.cookies
 
     if (token) {

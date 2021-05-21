@@ -1,5 +1,4 @@
-import { PrismaClient } from '@prisma/client'
-const prisma = new PrismaClient()
+import prisma from '../../db/prisma'
 
 export default async (req, res) => {
     const tweets = await prisma.tweet.findMany({
